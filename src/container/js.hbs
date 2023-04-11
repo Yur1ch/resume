@@ -1,0 +1,53 @@
+<div>
+
+    <div>
+        <h1><b>{{name}}</b></h1>
+    </div>
+
+    <br>
+    <hr>
+
+
+
+    <section>
+        <div>
+            <p>
+            <h2>About JS:</h2> {{description}}</p>
+        </div>
+
+        <div>
+            {{#with history}}
+            <div>
+                <h2><b>History:</b></h2>
+            </div>
+
+            <div>
+                <ul>
+                    <li>Year of creating: <mark>{{year}}</mark></li>
+                    <li>Founder: <u>{{founder}}</u></li>
+                </ul>
+            </div>
+            {{/with}}
+        </div>
+
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+
+        <div>
+            <h2><b>Types:</b></h2>
+        </div>
+
+        <div>
+            <ul class="list-group">
+                {{#each types}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+</div>
