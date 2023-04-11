@@ -1,0 +1,160 @@
+<div>
+    <section>
+        <div>
+            <p>{{category}}</p>
+        </div>
+        <hr>
+        <div>
+            <h1><b>{{name}}</b></h1>
+            <h3><b>{{description}}</b></h3>
+        </div>
+
+        <hr>
+
+        <div>
+            <p>
+
+            <h4>Price: <mark>{{price}}</mark></h4>
+            </p>
+        </div>
+        <hr>
+    </section>
+
+    <br>
+
+    <section>
+        {{#with features}}
+        <div>
+            <h4><b>Characteristics of laptop</b></h4>
+        </div>
+
+        <br>
+
+        <div>
+            {{#with processor}}
+            <div>
+                <p>Processor: {{brand}} {{model}}, {{speed}} ({{cores}} Cores , {{cache}} Cache)</p>
+            </div>
+            {{/with}}
+        </div>
+
+        <div>
+            {{#with memory}}
+            <div>
+                <p>Memory: {{size}} {{brand}} {{speed}}</p>
+            </div>
+            {{/with}}
+        </div>
+
+        <div>
+            {{#with storage}}
+            <div>
+                <p>Storage: {{size}} {{type}}</p>
+            </div>
+            {{/with}}
+        </div>
+
+        <div>
+            {{#with display}}
+            <div>
+                <p>Display: {{size}} {{technology}} {{resolution}} {{refresh_rate}}, {{brightness}} {{color_space}}</p>
+            </div>
+            {{/with}}
+        </div>
+
+        <div>
+            {{#with graphics}}
+            <div>
+                <p>Graphics: {{brand}} {{model}}, {{memory}}</p>
+            </div>
+            {{/with}}
+        </div>
+
+        <hr>
+
+        <div>
+
+            <div>
+
+                <p>Ports:</p>
+                {{#each ports}}
+                <ul>
+                    <li>{{type}} ({{count}} Pieces)</li>
+                </ul>
+
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Using tools
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        {{#each features}}
+                        <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+
+                <br>
+                {{/each}}
+            </div>
+
+            <hr>
+
+        </div>
+
+        <div>
+            {{#with battery}}
+            <div>
+                <p>Battery: {{type}}, {{caparity}} (Endurance: {{life}})</p>
+            </div>
+            {{/with}}
+        </div>
+
+        <hr>
+
+        <div>
+            <p>Weight: {{weight}}</p>
+        </div>
+
+        <div>
+            <p>Sizes:</p>
+
+            <div>
+                <ul class="list-group">
+                    {{#with dimensions}}
+                    <li class="list-group-item">Height: {{height}}</li>
+                    <li class="list-group-item">Width: {{width}}</li>
+                    <li class="list-group-item">Depth: {{depth}}</li>
+                    {{/with}}
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <p>Operation system: <u>{{operating_system}}</u></p>
+        </div>
+
+        <hr>
+
+        <div>
+            <p>Accessories:</p>
+        </div>
+
+        <div>
+            <ul class="list-group">
+                {{#each accessories}}
+                <li class="list-group-item">{{name}}, <mark>{{price}}</mark></li>
+                {{/each}}
+            </ul>
+        </div>
+
+        {{/with}}
+    </section>
+</div>
+
+<hr>
