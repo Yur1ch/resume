@@ -1,0 +1,177 @@
+<div>
+
+    <div>
+        <h1><b>{{name}}</b></h1>
+    </div>
+
+    <br>
+    <hr>
+
+
+
+    <section>
+        <div>
+            <p>
+            <h2>About JS:</h2> {{description}}</p>
+        </div>
+
+        <br>
+
+        <div>
+            {{#with history}}
+            <div>
+                <h2><b>History:</b></h2>
+            </div>
+
+            <div>
+                <ul>
+                    <li>Year of creating: <mark>{{year}}</mark></li>
+                    <li>Founder: <u>{{founder}}</u></li>
+                </ul>
+            </div>
+            {{/with}}
+        </div>
+
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+
+        <div>
+            <h2><b>Types:</b></h2>
+        </div>
+
+        <br>
+
+        <div>
+            <ul class="list-group">
+                {{#each types}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+
+        <div>
+            {{#with syntax}}
+            <div>
+
+                <div>
+                    <h2><b>Syntax:</b></h2>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>Variables: {{variables}}</li>
+                        <li>Function: {{function}}</li>
+                        <li>Conditionals: {{conditionals}}</li>
+                        <li>Loops: {{loop}}</li>
+                        <li>Classes: {{classes}}</li>
+                    </ul>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+
+        <div>
+            <h2><b>Features:</b></h2>
+        </div>
+
+        <br>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Examples of features
+            </button>
+
+            <ul class="dropdown-menu">
+                {{#each features}}
+                <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+
+        <div>
+            <h2><b>Libraires:</b></h2>
+        </div>
+
+        <br>
+
+        <div>
+            <ul class="list-group">
+                {{#each libraries}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+
+
+    <section>
+
+        <h2><b>Tools:</b></h2>
+
+        <br>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Using tools
+            </button>
+
+            <ul class="dropdown-menu">
+                {{#each tools}}
+                <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+
+
+        <div>
+            <h2><b>Community:</b></h2>
+        </div>
+        {{#each community}}
+        <div>
+            <ul>
+                <li>Name: {{name}}</li>
+                <li>Type: {{type}}</li>
+            </ul>
+        </div>
+
+        {{/each}}
+    </section>
+
+    <br>
+    <hr>
+
+</div>

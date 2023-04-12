@@ -1,0 +1,97 @@
+<div>
+    {{#with program.excursion}}
+
+
+
+    <section>
+
+        <h1><b>Excursions</b></h1>
+
+        <hr>
+
+        <div>
+            <p>
+            <h2>{{name}}</h2>
+            </p>
+
+            <p>Locatioin: <u>{{location.city}}, {{location.country}}</u></p>
+
+            <date>
+                <p>Date: <mark>{{date}}</mark></p>
+            </date>
+        </div>
+
+        <br>
+        <hr>
+
+        {{#each program}}
+
+
+        <div>
+            <h2>{{name}}</h2>
+        </div>
+
+        <div>
+            <p>Type: {{type}}</p>
+            <p>Duration: {{duration}}</p>
+        </div>
+
+        <div>
+            {{#with details}}
+            <div>
+                {{#with museum}}
+                <h2><b>Museum:</b></h2>
+            </div>
+
+            <div>
+                <p>Name: {{name}}</p>
+                <p>Location:</p>
+                <ul>
+                    {{#each location}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+
+
+                <div>
+                    <h2><b>Exhibits:</b></h2>
+                </div>
+                {{#each exhibits}}
+                <div>
+                    <br>
+                    <p>Name: {{name}}</p>
+                    <p>Artist: {{artist}}</p>
+                    <p>Desription: {{description}}</p>
+                    <audio>Audio guide: {{audio_guide}}</audio>
+                </div>
+                {{/each}}
+            </div>
+
+            <div>
+                {{#with guide}}
+                <div>
+                    <h2><b>Guide:s</b></h2>
+                </div>
+                {{/with}}
+            </div>
+
+            {{/with}}
+        </div>
+
+
+
+        {{/with}}
+</div>
+
+{{/each}}
+
+</section>
+
+{{/with}}
+
+</div>
