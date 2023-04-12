@@ -1,0 +1,80 @@
+<div>
+    <h1><b>{{name}}</b></h1>
+
+
+
+    {{#each users}}
+
+    <hr>
+    <div>
+        <h4>{{name}}, {{gender}}, {{age}} y.o.</h4>
+    </div>
+    {{#each friends}}
+    <div>
+
+        <p>Their friends:</p>
+
+        <hr>
+        <ul>
+            <li>{{name}}, {{gender}}, {{age}} y.o.</li>
+        </ul>
+
+
+
+        <div>
+            <b>
+                <p>{{name}}'s Mutual friends:</p>
+            </b>
+
+
+
+            {{#each mutual_friends}}
+            <ul class="list-group">
+                <br>
+                <li class="list-group-item">{{name}}, {{gender}}, {{age}} y.o.
+
+                    {{#each mutual_friends}}
+                    <ul class="list-group">
+                        <br>
+                        <li class="list-group-item">{{name}}, {{gender}}, {{age}} y.o.</li>
+
+
+                    </ul>
+                    {{/each}}
+
+
+                </li>
+
+
+            </ul>
+            {{/each}}
+        </div>
+
+        <br>
+
+
+
+
+
+
+        <div>
+            <b>
+                <p>Their groups:</p>
+            </b>
+
+            <div>
+                {{#each groups}}
+                <ul class="list-group">
+
+                    <li class="list-group-item">{{name}} <br> {{description}}</li>
+
+
+                </ul>
+                {{/each}}
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>
