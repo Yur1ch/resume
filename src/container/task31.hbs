@@ -40,12 +40,12 @@
 
             <h2>{{title}}</h2>
 
-            <section>
+            <section class="pb-3">
                 <div class="row g-4">
                     {{#each cards}}
 
 
-                    <div class="card col-6 ">
+                    <div class="card col-6">
                         <img class="card-img-top" src="{{picture.src}}" alt="{{picture.alt}}">
                         <div class="card-body">
 
@@ -114,20 +114,17 @@
 
                 <div class="row">
                     {{#each cards}}
-
-
-                    <div class="card col-3">
+                    <div class="card col-3 m-2">
                         <div class="card-header">{{name}}</div>
-                        {{#each items}}
+                        <div class="card-body">
+                            {{#each items}}
 
-                        <ul class="list-group">
-                            <li class="list-group-item">{{this}}</li>
-                        </ul>
-
-                        {{/each}}
+                            <ul class="list-group">
+                                <li class="list-group-item">{{this}}</li>
+                            </ul>
+                            {{/each}}
+                        </div>
                     </div>
-
-
                     {{/each}}
                 </div>
 
@@ -141,7 +138,7 @@
         <hr>
 
         <div>
-            <section class="col-12">
+            <section class="col-12 pb-3">
                 {{#with relaxion}}
                 <br>
                 <div class="display-3">{{title}}</div>
@@ -179,7 +176,7 @@
 
         <div>
             {{#with rest}}
-            <section class="col-12">
+            <section class="col-12 pb-3">
 
                 <div class="row g-2">
 
@@ -218,7 +215,7 @@
             <div class="display-2">{{title}}</div>
             <br>
 
-            <section class="col-10">
+            <section class="col-10 pb-3">
 
                 <div class="row g2">
 
@@ -265,7 +262,7 @@
 
                         <ul>
                             {{#each navigation}}
-                            <div>
+                            <div class="my-2">
                                 <a href="{{href}}" class="btn btn-outline-light text-primary"
                                     target="_blank">{{text}}</a>
                             </div>
@@ -278,7 +275,7 @@
                     <div class="col-4">
                         <ul>
                             {{#each socialMedia}}
-                            <div>
+                            <div class="my-2">
                                 <a href="{{link}}" class="btn btn-outline-dark" target="_blank">{{name}}</a>
                             </div>
                             {{/each}}
@@ -289,7 +286,7 @@
                     <div class="col-4">
                         <ul>
                             {{#each partners}}
-                            <div>
+                            <div class="my-2">
                                 <a href="{{link}}" class="btn btn-outline-info" target="_blank">{{name}}</a>
                             </div>
                             {{/each}}
