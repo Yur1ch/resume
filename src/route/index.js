@@ -1526,25 +1526,31 @@ router.get('/shophome', function (req, res) {
 
 // ================================================================
 
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bootstrap2', function (req, res) {
   // res.render генерує нам HTML сторінку
-})
-//            ↙ cюди вводимо назву файлу з сontainer
-res.render('bootstrap2', {
-  layout: 'basic',
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap2', {
+    layout: 'basic',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
 
-router.get('/bootstrap', function (req, res) {
-  // res.render генерує нам HTML сторінку
-})
-//            ↙ cюди вводимо назву файлу з сontainer
-res.render('bootstrap', {
-  layout: 'bootstrap',
-})
-//                  ↑↑ сюди вводимо JSON дані
+// router.get Створює нам один ентпоїнт
 
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/boostrap', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {})
+  //                  ↑↑ сюди вводимо JSON дані
+})
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
