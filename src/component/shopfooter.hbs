@@ -1,0 +1,26 @@
+<div class="col-12">
+    <div class="row">
+
+        {{#each footer}}
+        {{#if @last}}
+
+        {{#each this}}
+        <div class="col-3">
+            <div class="nav nav-tabs">
+                <a href="{{link}}" class="nav-link text-dark disabled text-muted m-1">{{text}}</a>
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+        {{#each this}}
+        <div class="col-3">
+            <div class="nav nav-tabs">
+                <a href="{{link}}" class="nav-link text-primary m-1">{{text}}</a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+        {{/each}}
+
+    </div>
+</div>

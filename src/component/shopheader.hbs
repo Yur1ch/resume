@@ -1,0 +1,23 @@
+<div class="row">
+    {{#with navigation}}
+    <div class="card">
+
+        <div class="nav justify-content-end">
+            {{#each links}}
+            <div class="nav-item p-2">
+                <div class="card">
+                    <a href="{{href}}" class="nav nav-link">{{text}}</a>
+                </div>
+            </div>
+            {{/each}}
+
+            <div class="nav-item p-2">
+                <div class="card">
+                    <a href="{{href}}" class="nav nav-link disabled">Disabled</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{/with}}
+</div>
