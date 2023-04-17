@@ -1548,7 +1548,9 @@ router.get('/boostrap', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('bootstrap', {})
+  res.render('bootstrap', {
+    layout: 'basic',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 // ================================================================
