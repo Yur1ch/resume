@@ -1,0 +1,94 @@
+<main>
+
+
+    <div class="row">
+        <div>
+            <ol class="breadcrumb">
+                {{#each breadcrumb}}
+                {{#if @last}}
+                <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
+                {{else}}
+                <li class="breadcrumb-item disabled"><a href="{{url}}">{{name}}</a></li>
+                {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+    <br>
+    <div>
+        {{#with newsData}}
+        <div class="card">
+            <img src="{{photo}}" class="card-img-top pb-2">
+            <div class="card-header">
+                {{#with head}}
+                <h3>{{heading}}</h3>
+                <p>{{description}}</p>
+                {{/with}}
+            </div>
+            <div class="card-body">
+                {{#each body}}
+                <div class="card-title"><b>{{title}}</b></div>
+                <p>{{text}}</p>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="row">
+        {{#with newsOtherBlock}}
+        <div class="display-5 text-center pb-3">{{title}}</div>
+        {{#each cards}}
+
+        <div class="col-3">
+            <div class="card text-bg-dark">
+                <div class="card-header">{{title}}
+                    {{#if isTop}}
+                    <span class="badge bg-danger">TOP</span>
+                    {{/if}}
+
+                    {{#if isNew}}
+                    <span class="badge bg-success">New</span>
+                    {{/if}}
+                </div>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/with}}
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div>
+        {{#with service}}
+        <div class="card text-bg-success">
+            <div class="m-3">
+                <h2 class="text-center">{{title}}</h2>
+                <p class="text-center">{{description}}</p>
+                <div class="col-12">
+                    {{#each buttons}}
+                    <div class="text-center">
+                        <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+
+    <br>
+    <hr>
+
+
+
+</main>
