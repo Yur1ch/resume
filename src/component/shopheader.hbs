@@ -1,23 +1,24 @@
 <div class="row">
-    {{#with navigation}}
-    <div class="card">
+    <div class="col-12">
+        {{#with navigation}}
+        <div class="card">
 
-        <div class="nav justify-content-end">
-            {{#each links}}
-            <div class="nav-item p-2">
-                <div class="card">
-                    <a href="{{href}}" class="nav nav-link">{{text}}</a>
-                </div>
-            </div>
-            {{/each}}
+            <div class="nav justify-content-end">
+                {{#each links}}
 
-            <div class="nav-item p-2">
-                <div class="card">
-                    <a href="{{href}}" class="nav nav-link disabled">Disabled</a>
+                <div class="nav-item p-2">
+                    <div class="card">
+                        {{#if @last}}
+                        <a href="{{href}}" class="nav nav-link disabled">{{text}}</a>
+                        {{else}}
+                        <a href="{{href}}" class="nav nav-link actives">{{text}}</a>
+                        {{/if}}
+                    </div>
                 </div>
+                {{/each}}
             </div>
+
         </div>
-
+        {{/with}}
     </div>
-    {{/with}}
 </div>
