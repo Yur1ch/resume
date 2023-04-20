@@ -1,17 +1,13 @@
-<div>
-    {{#with service}}
-    <div class="card text-bg-success">
-        <div class="m-3">
-            <h2 class="text-center">{{title}}</h2>
-            <p class="text-center">{{description}}</p>
-            <div class="col-12">
-                {{#each buttons}}
-                <div class="text-center">
-                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                </div>
-                {{/each}}
+<div class="card text-bg-success">
+    <div class="my-3">
+        <h2 class="text-center">{{title}}</h2>
+        <p class="text-center">{{description}}</p>
+        <div class="col-12">
+            {{#each buttons}}
+            <div class="text-center">
+                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
             </div>
+            {{/each}}
         </div>
     </div>
-    {{/with}}
 </div>
