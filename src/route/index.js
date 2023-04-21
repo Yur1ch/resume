@@ -38,11 +38,118 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    header: {
+      aboutMe: {
+        firstname: 'Yurii',
+        lastname: 'Shulzhuk',
+      },
+      project: {
+        name: 'Resume project',
+      },
+    },
+
+    allPages: {
+      title: 'List of pages',
+
+      cards: [
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shoproduct',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shopproduct',
+          },
+        },
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shop Catalog',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shopcatalog',
+          },
+        },
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shop Home',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shophome',
+          },
+        },
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shop News',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shopnews',
+          },
+        },
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shop Order',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shoporder',
+          },
+        },
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shop Profile',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shopprofile',
+          },
+        },
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shop Review',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shopreview',
+          },
+        },
+        {
+          image: 'https://picsum.photos/110/80',
+          name: 'Shop Cart',
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+          button: {
+            text: 'Check this page',
+            isPrimary: true,
+            link: 'http://localhost:3000/shopcart',
+          },
+        },
+      ],
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -207,26 +314,6 @@ router.get('/education', function (req, res) {
           isEnd: false,
         },
       ],
-      skills: [
-        'HTML',
-        'Handlbars',
-        'VSCode',
-        'Git',
-        'Terminal',
-        'NPM',
-      ],
-      summary: {
-        title: 'Summary',
-        text: `'Open-minded for new technologies, with 1 years of experience in development.
-        Whenever I start work on a new project I learn the domain and try tu understand the idea of the project. Good
-        player, every colleage is a friend to me.'`,
-      },
-      experience: {
-        title: 'Other experience',
-        text: `'Pet project for parsing sport betting data from different platforms ( odds ) and sport statistics (
-          tournament position, goals etc), analyzing by simple mathematics models and preparing probability
-          for such events like: money line - first win / draw / second win, totals etc.'`,
-      },
     },
 
     footer,

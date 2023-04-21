@@ -7,41 +7,38 @@
 <div>
     {{#with main}}
     <main>
-        <section>
-            {{> title big=true data="All skills"}}
-            <ul>
-                {{#each skills}}
-                <li>
-                    {{name}}
+        <div class="row">
 
-                    {{#if point includeZero=true}} ({{point}}) {{/if}}
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">All skills</h3>
+                    </div>
+                    <div class="card-body">
+                        {{#each skills}}
+                        <ul>
+                            <li>{{name}}</li>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
 
-                    {{#if isTop}} (TOP) {{/if}}
-
-                    {{#unless point includeZero=true}} (Не вивчаємо) {{/unless}}
-
-                    {{#unless point}}
-                    {{#if point includeZero=true}}
-                    (Зараз вивчаємо)
-                    {{/if}}
-                    {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
-        </section>
-        <section>
-            {{> title big=false data="My hobbies"}}
-            <ul>
-                {{#each hobbies}}
-                <li>
-                    {{name}}
-
-                    {{#if isMain includeZero=true}} (Favourite) {{/if}}
-
-                </li>
-                {{/each}}
-            </ul>
-        </section>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">All skills</h3>
+                    </div>
+                    <div class="card-body">
+                        {{#each hobbies}}
+                        <ul>
+                            <li>{{name}}</li>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     {{/with}}
 </div>

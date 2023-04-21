@@ -7,97 +7,53 @@
 <div class="p-3">
     {{#with main}}
     <main>
-        <section>
-            {{> title big=true data="Work history"}}
-            <div>
-                <p>
+        <h1>Work history</h1>
+
+        {{#each works}}
+        <p>{{position}}</p>
+
+        {{#with company}}
+        <a href="{{url}}">{{name}}</a>
+        {{/with}}
+
+        {{#with duration}}
+        <p>{{from}} - {{to}} (Still working)</p>
+        {{/with}}
+        <br>
+        <h2>Projects</h2>
+
+        {{#each projects}}
+        <a href="{{url}}">{{name}}</a>
+        <p class="my-3">{{about.name}}</p>
+
+
+        <div class="card mb-3">
+            <div class="card-body">
+                {{#each stacks}}
                 <ul>
-                    {{#each works}}
-                    <li>
-                        <div>{{position}}</div>
-
-                        <br>
-
-                        <div>
-                            {{duration.from}} -
-                            {{#if duration.to}}
-                            {{duration.to}}
-                            {{else}}
-                            (Досі працюємо)
-                            {{/if}}
-                        </div>
-
-                        <br>
-
-                        <div>
-                            {{#if company.url}}
-                            {{> link text=company.name href=company.url blank=true noLine=true}}
-                            {{else}}
-                            <b>{{company.name}}</b>
-                            {{/if}}
-                        </div>
-
-                        <hr>
-
-                        <br>
-                        <br>
-
-                        <div>
-                            <strong>Projects ({{projectAmount}})</strong>
-                        </div>
-
-                        <br>
-
-                        <ul>
-                            {{#each projects}}
-                            <li>
-                                <div>{{> link text=name href=url blank=true noLine=true}}</div>
-
-                                <br>
-
-                                <div>
-                                    <p>{{about.name}}</p>
-                                </div>
-
-                                <br>
-
-                                <div>
-                                    <em>Project stacks: {{stackAmount}}</em>
-                                </div>
-
-                                <br>
-                                <div>
-                                    <ul>
-                                        {{#each stacks}}
-                                        <li>{{name}}</li>
-                                        {{/each}}
-                                    </ul>
-                                </div>
-
-                                <br>
-
-                                <div>
-                                    <em>Project awards: {{awardAmount}}</em>
-                                </div>
-
-                                <br>
-
-                                <div>
-                                    <ul>
-                                        {{#each awards}}
-                                        <li>{{name}}</li>
-                                        {{/each}}
-                                    </ul>
-                                </div>
-                            </li>
-                            {{/each}}
-                        </ul>
-                    </li>
-                    <br>
-                    {{/each}}
+                    <li>{{name}}</li>
                 </ul>
+                {{/each}}
             </div>
-        </section>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                {{#each awards}}
+                <ul>
+                    <li>{{name}}</li>
+                </ul>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+        {{/each}}
+        <hr>
+        <div>
+            <a href="/summary" class="btn btn-secondary mt-4">Come back to summary</a>
+        </div>
     </main>
     {{/with}}
+
+    {{>footer}}
 </div>
