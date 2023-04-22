@@ -7,25 +7,29 @@
 <div>
     {{#with main}}
     <main>
-        <section class="mb-5">
-            {{> title big=true data=summary.title}}
-            <div>
-                <p>
-                    {{summary.text}}
-                </p>
+
+        {{#with summary}}
+        <div class="card">
+            <div class="card-header">
+                <h3>{{title}}</h3>
             </div>
-        </section>
+            <div class="card-body">
+                <p>{{text}}</p>
+            </div>
+        </div>
+        {{/with}}
 
         {{#with experience}}
-        <section>
-            {{> title big=false data=title}}
-            <div>
-                <p>
-                    {{text}}
-                </p>
+        <div class="card my-5">
+            <div class="card-header">
+                <h3>{{title}}</h3>
             </div>
-        </section>
+            <div class="card-body">
+                <p>{{text}}</p>
+            </div>
+        </div>
         {{/with}}
+
     </main>
     {{/with}}
 </div>

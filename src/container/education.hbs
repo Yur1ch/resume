@@ -2,27 +2,35 @@
     {{#with main}}
     <main>
         <section>
-            {{> title big=true data="My educations"}}
-            <ul>
-                {{#each educations}}
-                <li>
-                    {{name}}
-                    {{#unless isEnd includeZero=false}} (Ще в процесі) {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
+            <div class="card">
+                <div class="card-header text-center">{{> title big=true data="My educations"}}</div>
+                <div class="card-body">
+                    <ul>
+                        {{#each educations}}
+                        <li class="my-1">
+                            {{name}}
+                            {{#unless isEnd includeZero=false}} (Ще в процесі) {{/unless}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </section>
         <section>
-            {{> title big=false data="My certificates"}}
-            <ul>
-                {{#each certificates}}
-                <li>
-                    {{name}}
+            <div class="card">
+                <div class="card-header text-center">{{> title big=false data="My certificates"}}</div>
+                <div class="card-body">
+                    <ul>
+                        {{#each certificates}}
+                        <li class="my-1">
+                            {{name}}
 
-                    {{#if id includeZero=true}} ({{id}}) {{/if}}
-                </li>
-                {{/each}}
-            </ul>
+                            {{#if id includeZero=true}} ({{id}}) {{/if}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
     {{/with}}
