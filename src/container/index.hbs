@@ -1,31 +1,67 @@
 <main>
 
-    {{#with allPages}}
     <div class="row">
-        <h2 class="text-center">{{title}}</h2>
 
 
-        {{#each cards}}
-        <div class="col-3">
-            <div class="card my-3">
-                <img src="{{image}}" class="card-img-top">
+        <h2>Список сторінок</h2>
+        <p>Тут вам потрібно написати інформацію про ваш проєкт.<br>
+            Поки що можна написати будь-який текст</p>
 
-                <div class="card-header text-center text-uppercase"><b>{{name}}</b></div>
-                <div class="card-body">
 
-                    <p>{{description}}</p>
-                    <hr>
-                    <div class="text-center">
-                        {{#with button}}
-                        <a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                        {{/with}}
-                    </div>
-                </div>
+        <div class="col-2">
+
+            <div class="my-3">
+                <a href="/summary" class="btn btn-primary">Summary</a>
             </div>
+
+            <div class="my-3">
+                <a href="/work" class="btn btn-primary">Work</a>
+            </div>
+            <div class="my-3">
+                <a href="/education" class="btn btn-primary">Education</a>
+            </div>
+            <div class="my-3">
+                <a href="/skills" class="btn btn-primary">Skills</a>
+            </div>
+
         </div>
-        {{/each}}
 
+        <div class="col-2">
+
+            <div class="my-3">
+                <a href="/shopcart" class="btn btn-primary">Shop Cart</a>
+            </div>
+
+            <div class="my-3">
+                <a href="/shopcatalog" class="btn btn-primary">Shop Catalog</a>
+            </div>
+            <div class="my-3">
+                <a href="/shophome" class="btn btn-primary">Shop Home</a>
+            </div>
+            <div class="my-3">
+                <a href="/shopnews" class="btn btn-primary">Shop News</a>
+            </div>
+
+        </div>
+
+        <div class="col-2">
+
+            <div class="my-3">
+                <a href="/shoporder" class="btn btn-primary">Shop Order</a>
+            </div>
+
+            <div class="my-3">
+                <a href="/shopproduct" class="btn btn-primary">Shop Product</a>
+            </div>
+            <div class="my-3">
+                <a href="/shopprofile" class="btn btn-primary">Shop Profile</a>
+            </div>
+            <div class="my-3">
+                <a href="/shopreview" class="btn btn-primary">Shop Review</a>
+            </div>
+
+        </div>
     </div>
-    {{/with}}
 
+    <hr>
 </main>
